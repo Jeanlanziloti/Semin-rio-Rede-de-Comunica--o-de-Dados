@@ -1,0 +1,5 @@
+class Protocol < ActiveRecord::Base
+  belongs_to :layer
+  attr_accessible :description, :name
+  validates :name, :layer, :presence => true
+end

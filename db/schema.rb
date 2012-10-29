@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028222504) do
+ActiveRecord::Schema.define(:version => 20121028233116) do
 
   create_table "layers", :force => true do |t|
     t.string   "name"
@@ -19,5 +19,15 @@ ActiveRecord::Schema.define(:version => 20121028222504) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "protocols", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "layer_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "protocols", ["layer_id"], :name => "index_protocols_on_layer_id"
 
 end

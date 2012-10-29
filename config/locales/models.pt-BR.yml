@@ -4,3 +4,8 @@ pt-BR:
       layer:
         name: "Nome"
         description: "Descrição"
+      protocol:
+        name: "Nome"
+        description: "Descrição"
+        layer: "Camada"
+

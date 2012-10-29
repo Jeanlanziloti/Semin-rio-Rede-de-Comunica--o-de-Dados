@@ -1,5 +1,6 @@
 pt-BR:
   activerecord:
-    layer:
-      name: "Nome"
-      description: "Descrição"
+    attributes:
+      layer:
+        name: "Nome"
+        description: "Descrição"
