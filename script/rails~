@@ -4,4 +4,4 @@
 APP_PATH = File.expand_path('../../config/application',  __FILE__)
 require File.expand_path('../../config/boot',  __FILE__)
 require 'rails/commands'
-
+config.action_view.javascript_expansions[:defaults] = %w(dispatcher jquery-1.4.2 rails)

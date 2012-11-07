@@ -1,44 +1,36 @@
 class LayersController < ApplicationController
-  # GET /layers
-  # GET /layers.json
   def index
+		@protcount = Protocols.count(:all, :group => :layer_id)
     @layers = Layer.all
-
+    
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.json { render json: @layers }
     end
   end
 
-  # GET /layers/1
-  # GET /layers/1.json
   def show
     @layer = Layer.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
+    	respond_to do |format|
+      format.html 
       format.json { render json: @layer }
     end
   end
 
-  # GET /layers/new
-  # GET /layers/new.json
   def new
     @layer = Layer.new
-
+    
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.json { render json: @layer }
     end
   end
 
-  # GET /layers/1/edit
   def edit
     @layer = Layer.find(params[:id])
   end
 
-  # POST /layers
-  # POST /layers.json
   def create
     @layer = Layer.new(params[:layer])
 
@@ -53,8 +45,6 @@ class LayersController < ApplicationController
     end
   end
 
-  # PUT /layers/1
-  # PUT /layers/1.json
   def update
     @layer = Layer.find(params[:id])
 
@@ -68,9 +58,7 @@ class LayersController < ApplicationController
       end
     end
   end
-
-  # DELETE /layers/1
-  # DELETE /layers/1.json
+ 
   def destroy
     @layer = Layer.find(params[:id])
     @layer.destroy
@@ -78,6 +66,6 @@ class LayersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to layers_url }
       format.json { head :no_content }
-    end
+	  end
   end
 end

@@ -28,8 +28,15 @@
           %a.brand(href="#") Seminario
           .container.nav-collapse
             %ul.nav
+              %li= link_to "Home", root_path
               %li= link_to "Camadas", layers_path
               %li= link_to "Protocolos", protocols_path
+              %li= link_to "Grafico", pages_chart_path
+             
+             
+             
+             
+              
               
     .container
 
@@ -43,11 +50,15 @@
               %li.nav-header Menu
               %li= link_to "Camadas", layers_path
               %li= link_to "Protocolos", protocols_path
+              %li= link_to "Novo Protocolo", new_protocol_path
+              %li= link_to "Nova Camada", new_layer_path             
     
       %footer
-        %p &copy; Company 2012
+        
     /
       Javascripts
       \==================================================
     / Placed at the end of the document so the pages load faster
     = javascript_include_tag "application"
+
+

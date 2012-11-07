@@ -1,7 +1,8 @@
 class LayersController < ApplicationController
   def index
+		
     @layers = Layer.all
-
+    
     respond_to do |format|
       format.html 
       format.json { render json: @layers }
@@ -11,7 +12,7 @@ class LayersController < ApplicationController
   def show
     @layer = Layer.find(params[:id])
 
-    respond_to do |format|
+    	respond_to do |format|
       format.html 
       format.json { render json: @layer }
     end
@@ -19,7 +20,7 @@ class LayersController < ApplicationController
 
   def new
     @layer = Layer.new
-
+    
     respond_to do |format|
       format.html 
       format.json { render json: @layer }
@@ -57,7 +58,7 @@ class LayersController < ApplicationController
       end
     end
   end
-
+ 
   def destroy
     @layer = Layer.find(params[:id])
     @layer.destroy
@@ -65,6 +66,6 @@ class LayersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to layers_url }
       format.json { head :no_content }
-    end
+	  end
   end
 end

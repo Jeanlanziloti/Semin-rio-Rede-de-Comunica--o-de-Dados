@@ -5,8 +5,8 @@ class CreateLayers < ActiveRecord::Migration
       t.text :description
 
       t.timestamps
-      layers.things.length
-	
+  layers.things.length
+	puts"layers"
 	
     end
   end

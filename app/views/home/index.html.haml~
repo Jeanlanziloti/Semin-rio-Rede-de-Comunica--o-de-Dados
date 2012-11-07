@@ -1,0 +1,2 @@
+%h1 grafico
+%script{:src => "../amcharts/amcharts.js", :type => "text/javascript"} 
